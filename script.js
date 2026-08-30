@@ -12,8 +12,7 @@
       priceRaw: 10000,
       description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
       image: "fotoproduk1.jpeg",
-      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"},
-      sold: true
+      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"}
     },
     {
       id: 2,
@@ -53,7 +52,8 @@
       priceRaw: 15000,
       description: "Warna birunya begitu terang dan mencolok—mengingatkan pada langit siang yang cerah, atau mungkin sebiru layar Blue Screen of Death (BSOD) saat sedang sibuk-sibuknya mengeksekusi coding tugas Operating Systems. Bedanya, melihat bunga kawat bulu yang satu ini dijamin bikin hati tenang dan mood kembali naik, bukan malah panik!",
       image: "fotoproduk5.jpg",
-      info: { "Karakteristik": "Memiliki kelopak tebal berwarna biru", "Pusat Bunga": "Dilengkapi putik kawat bulu berwarna putih" }
+      info: { "Karakteristik": "Memiliki kelopak tebal berwarna biru", "Pusat Bunga": "Dilengkapi putik kawat bulu berwarna putih" },
+      sold: true
     },
      {
       id: 6,
@@ -73,7 +73,8 @@
       priceRaw: 15000,
       description: "Cermin saku ini bukan sekadar alat untuk touch-up, tapi juga fashion statement! Dengan sepasang telinga mungil di bagian atasnya, cermin ini seolah-olah sedang menyamar menjadi kucing ajaib yang siap menemani hari-harimu.",
       image: "fotoproduk7.jpg",
-      info: { "Desain Utama": "Cermin portabel dengan bingkai kawat bulu", "Saran Penggunaan": "Sangat pas digantung di tas jinjing" }
+      info: { "Desain Utama": "Cermin portabel dengan bingkai kawat bulu", "Saran Penggunaan": "Sangat pas digantung di tas jinjing" },
+      sold: true
     },
      {
       id: 8,
@@ -83,7 +84,8 @@
       priceRaw: 15000,
       description: "Jika cermin kucing sebelumnya terasa kurang feminin, perkenalkan saudari perempuannya yang super girly! Cermin ini hadir dengan telinga bulat ala beruang teddy dan tambahan bunga kawat bulu yang mekar sempurna di bagian bawah.",
       image: "fotoproduk8.jpg",
-      info: { "Karakteristik": "Tampilannya jauh lebih bertekstur dan chunky" }
+      info: { "Karakteristik": "Tampilannya jauh lebih bertekstur dan chunky" },
+      sold: true
     },
      {
       id: 9,
@@ -93,7 +95,8 @@
       priceRaw: 10000,
       description: "Nah, ini dia bintang utamanya yang paling mencuri perhatian! Gantungan kunci yang satu ini hadir dalam wujud karakter yang super unik. Karakternya yang nyentrik dan ekspresif ini bahkan punya aura yang pas banget kalau dijadikan inspirasi karakter maskot visual untuk sebuah aplikasi digital kekinian.",
       image: "fotoproduk9.jpg",
-      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah"}
+      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah"},
+      sold: true
     },
      {
       id: 10,
@@ -103,7 +106,8 @@
       priceRaw: 15000,
       description: "Bagi pecinta earth tones atau kaum cewek/cowok bumi, cermin ini adalah jodoh yang ditakdirkan untuk tasmu. Dengan sepasang telinga runcing yang selalu siaga, cermin ini seakan-akan bertugas memantau apakah makeup-mu luntur atau ada sisa bumbu Indomie yang tertinggal di sudut bibir.",
       image: "fotoproduk10.jpg",
-      info: { "Karakteristik": "Warnanya netral dan unisex"}
+      info: { "Karakteristik": "Warnanya netral dan unisex"},
+      sold: true
     },
      {
       id: 11,
@@ -133,7 +137,8 @@
       priceRaw: 15000,
       description: "Kombinasi warna cokelat tua dan krem putihnya benar-benar bikin ngiler, persis seperti secangkir cappuccino atau latte hangat. Cermin ini adalah teman nongkrong yang sempurna!",
       image: "fotoproduk13.jpg",
-      info: { "Ornamen": "Sepasang telinga bulat beruang cokelat", "Karakteristik": "Tampilannya sangat warm dan earthy"}
+      info: { "Ornamen": "Sepasang telinga bulat beruang cokelat", "Karakteristik": "Tampilannya sangat warm dan earthy"},
+      sold: true
     },
      {
       id: 14,
@@ -163,7 +168,8 @@
       priceRaw: 15000,
       description: "Gantungan kunci ini sedang mengalami krisis identitas yang luar biasa menggemaskan! Apakah dia anak ayam? Anak bebek? Atau katak yang kelebihan pigmen kuning? Yang pasti, kelucuannya tidak bisa diperdebatkan.",
       image: "fotoproduk16.jpg",
-      info: { "Desain Utama": "Karakter bebek/anak ayam kuning 3D", "Karakteristik": "Desain unik dan menggemaskan" }
+      info: { "Desain Utama": "Karakter bebek/anak ayam kuning 3D", "Karakteristik": "Desain unik dan menggemaskan" },
+      sold: true
     },
      {
       id: 17,
@@ -183,7 +189,8 @@
       priceRaw: 15000,
       description: "Kembali ke lini cermin saku, kali ini hadir dengan desain yang paling menenangkan jiwa. Tidak ada telinga hewan nyentrik atau ekor spiral panjang, hanya kesederhanaan awan dan langit biru yang memanjakan mata.",
       image: "fotoproduk18.jpg",
-      info: { "Karakteristik": "Tampilannya sangat rapi, simetris, dan clean" }
+      info: { "Karakteristik": "Tampilannya sangat rapi, simetris, dan clean" },
+      sold: true
     },
      {
       id: 19,
@@ -193,7 +200,8 @@
       priceRaw: 15000,
       description: "Kalau cermin biasa cuma memantulkan wajah, cermin yang satu ini memantulkan aura bintang pop! Dengan telinga panjang yang dihiasi payet bunga, dia siap menjadi pusat perhatian di mana pun kamu berada.",
       image: "fotoproduk19.jpg",
-      info: { "Ornamen Bintang": "Sepasang telinga kelinci panjang", "Karakteristik": "Ekstra girly dan flashy" }
+      info: { "Ornamen Bintang": "Sepasang telinga kelinci panjang", "Karakteristik": "Ekstra girly dan flashy" },
+      sold: true
     },
      {
       id: 20,
