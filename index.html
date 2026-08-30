@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teater Lonceng — Official Collection</title>
+<meta name="description" content="Katalog resmi merchandise Teater Lonceng — apparel, poster, dan tiket pertunjukan.">
+<link rel="icon" href="logo.jpg">
+
+<!-- Preload critical assets -->
+<link rel="preload" href="logo.jpg" as="image">
+<link rel="preload" href="style.css" as="style">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar" id="navbar">
+  <a href="#top" class="nav-logo">
+    <img src="logo.jpg" alt="Teater Lonceng" width="38" height="38">
+    <span>TEATER LONCENG</span>
+  </a>
+  <div class="nav-center">
+    <a href="#catalog">CATALOG</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+  <div class="nav-right">
+    <a href="#contact" class="nav-contact">CONTACT</a>
+    <a href="#catalog" class="btn-order">ORDER NOW</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#catalog" class="mobile-link">CATALOG</a>
+  <a href="#contact" class="mobile-link">CONTACT</a>
+  <a href="#catalog" class="btn-order mobile-link">ORDER NOW</a>
+</div>
+
+<!-- ============ TOP SECTION ============ -->
+<section class="intro" id="top">
+  <img src="logo.jpg" alt="Teater Lonceng" class="intro-logo" width="74" height="74">
+  <h1>TEATER LONCENG</h1>
+  <div class="eyebrow uppercase">Official Collection</div>
+  <p class="tagline">"Selected pieces from the stage."</p>
+  <p class="desc">Discover our curated collection of Teater Lonceng merchandise.</p>
+</section>
+<div class="divider"></div>
+
+<!-- ============ CATALOG ============ -->
+<section class="catalog" id="catalog">
+  <div class="catalog-head">
+    <div class="catalog-head-left">
+      <h2>THE COLLECTION</h2>
+      <p>"Take a piece of the stage with you."</p>
+    </div>
+    <div class="catalog-count uppercase" id="productCount">03 PRODUCTS</div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search the collection...">
+    </div>
+    <div class="filters" id="filterGroup">
+      <button class="filter-btn active" data-filter="ALL">ALL</button>
+      <button class="filter-btn" data-filter="MERCHANDISE">MERCHANDISE</button>
+      <button class="filter-btn" data-filter="TICKET">TICKET</button>
+    </div>
+  </div>
+
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <img src="" alt="" class="modal-img" id="modalImg">
+    <div class="modal-info">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-category uppercase" id="modalCategory"></div>
+      <h3 class="modal-name" id="modalName"></h3>
+      <div class="modal-price" id="modalPrice"></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-label uppercase">Product Information</div>
+      <ul class="modal-info-list" id="modalInfoList"></ul>
+      <button class="modal-buy uppercase" id="modalBuyBtn">Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ADMIN CHOOSER MODAL ============ -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-modal">
+    <button class="modal-close" id="adminClose">✕</button>
+    <div class="admin-title uppercase">Chat with</div>
+    <h3 class="admin-heading">Pilih Admin</h3>
+    <p class="admin-sub">Silakan pilih admin yang ingin kamu hubungi via WhatsApp.</p>
+    <div class="admin-options" id="adminOptions"></div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <img src="logo.jpg" alt="Teater Lonceng" width="46" height="46">
+  <div class="f-title">TEATER LONCENG</div>
+  <div class="f-sub uppercase">Official Collection</div>
+  <a href="#" id="footerWaBtn" class="btn-order uppercase">Chat on WhatsApp</a>
+  <div class="f-copy">© 2026 Teater Lonceng</div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="#" id="fabWhatsapp" class="fab-whatsapp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.697 4.611 1.897 6.478L4 29l7.694-1.865A11.94 11.94 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3zm6.988 16.66c-.29.815-1.44 1.5-2.365 1.696-.63.13-1.452.235-4.218-.905-3.54-1.457-5.82-5.03-6-5.264-.176-.234-1.44-1.915-1.44-3.652 0-1.737.91-2.593 1.234-2.948.323-.355.705-.443.94-.443.235 0 .47.002.675.012.216.01.507-.082.792.605.29.7.984 2.417 1.07 2.593.088.176.147.382.03.616-.117.235-.176.382-.352.588-.176.206-.37.46-.528.617-.176.176-.36.367-.155.72.206.353.914 1.51 1.963 2.446 1.35 1.204 2.488 1.577 2.84 1.753.353.176.559.147.764-.088.206-.235.882-1.03 1.117-1.383.235-.353.47-.294.792-.176.323.117 2.04.962 2.39 1.138.352.176.587.264.675.412.088.147.088.85-.202 1.664z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<!-- Script deferred so it never blocks first paint -->
+<script src="script.js" defer></script>
+</body>
+</html>
