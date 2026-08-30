@@ -384,6 +384,42 @@
     border-radius:20px;
     border:1px solid rgba(201,168,106,0.25);
   }
+  /* ---- sold out state ---- */
+  .sold-badge{
+    position:absolute;
+    top:16px;
+    right:16px;
+    z-index:2;
+    font-size:0.62rem;
+    letter-spacing:0.14em;
+    color:var(--text);
+    background:var(--accent);
+    padding:5px 12px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.15);
+  }
+  .product-card.is-sold .card-img-wrap img{ opacity:0.35; filter:grayscale(60%); }
+  .product-card.is-sold .card-img-wrap::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(8,8,8,0.25);
+  }
+  .card-actions button:disabled,
+  .modal-buy:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
+    background:transparent;
+    border-color:var(--line);
+    color:var(--text-secondary);
+    box-shadow:none;
+  }
+  .card-actions button:disabled:hover,
+  .modal-buy:disabled:hover{
+    box-shadow:none;
+    border-color:var(--line);
+  }
+
   .card-body{ padding:26px 24px 24px; }
   .card-category{
     font-size:0.66rem;
