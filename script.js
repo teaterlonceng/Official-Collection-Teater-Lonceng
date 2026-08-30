@@ -13,6 +13,7 @@
       description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
       image: "fotoproduk1.jpeg",
       info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"}
+      sold: true
     },
     {
       id: 2,
