@@ -244,6 +244,16 @@
       image: "fotoproduk24.jpg",
       info: { "Detail Visual": "Tekstur kawat bulu yang fuzzy", "Karakteristik": "Ide yang sangat brilian dan out of the box"}
     },
+    {
+      id: 25,
+      name: "KEY CHAIN 25",
+      category: "MERCHANDISE",
+      price: "Rp12.000",
+      priceRaw: 12000,
+      description: "Gantungan kunci yang satu ini sukses bikin perut keroncongan mendadak. Bentuknya begitu meyakinkan sampai-sampai rasanya ingin dicelupkan ke dalam secangkir kopi panas!",
+      image: "fotoproduk24.jpg",
+      info: { "Detail Visual": "Tekstur kawat bulu yang fuzzy", "Karakteristik": "Ide yang sangat brilian dan out of the box"}
+    },
   ];
 
   const TICKET_EMPTY_MESSAGE = "Belum ada tiket yang tersedia saat ini — nantikan kabar selanjutnya dari kami.";
