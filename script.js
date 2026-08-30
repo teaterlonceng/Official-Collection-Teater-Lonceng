@@ -12,7 +12,8 @@
       priceRaw: 10000,
       description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
       image: "fotoproduk1.jpeg",
-      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"}
+      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"},
+      sold: true
     },
     {
       id: 2,
@@ -92,7 +93,7 @@
       priceRaw: 10000,
       description: "Nah, ini dia bintang utamanya yang paling mencuri perhatian! Gantungan kunci yang satu ini hadir dalam wujud karakter yang super unik. Karakternya yang nyentrik dan ekspresif ini bahkan punya aura yang pas banget kalau dijadikan inspirasi karakter maskot visual untuk sebuah aplikasi digital kekinian.",
       image: "fotoproduk9.jpg",
-      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah",}
+      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah"}
     },
      {
       id: 10,
@@ -329,11 +330,12 @@
 
     filtered.forEach((p, i) => {
       const card = document.createElement('div');
-      card.className = "product-card";
+      card.className = "product-card" + (p.sold ? " is-sold" : "");
       card.style.animationDelay = (i * 90) + "ms";
       card.innerHTML = `
         <div class="card-img-wrap">
           <span class="card-index">${String(p.id).padStart(2,'0')} / ${String(products.length).padStart(2,'0')}</span>
+          ${p.sold ? '<span class="sold-badge uppercase">Sold Out</span>' : ''}
           <img src="${p.image}" alt="${p.name}" loading="lazy">
         </div>
         <div class="card-body">
@@ -343,7 +345,7 @@
           <div class="card-price">${p.price}</div>
           <div class="card-actions">
             <button class="btn-view uppercase" data-view="${p.id}">View Details</button>
-            <button class="btn-buy uppercase" data-buy="${p.id}">Buy Now</button>
+            <button class="btn-buy uppercase" data-buy="${p.id}" ${p.sold ? 'disabled' : ''}>${p.sold ? 'Sold Out' : 'Buy Now'}</button>
           </div>
         </div>
       `;
@@ -355,7 +357,7 @@
     grid.querySelectorAll('[data-view]').forEach(btn => {
       btn.addEventListener('click', () => openModal(Number(btn.dataset.view)));
     });
-    grid.querySelectorAll('[data-buy]').forEach(btn => {
+    grid.querySelectorAll('[data-buy]:not([disabled])').forEach(btn => {
       btn.addEventListener('click', () => {
         const product = products.find(p => p.id === Number(btn.dataset.buy));
         openAdminChooser(buyMessage(product));
@@ -399,7 +401,15 @@
     modalPrice.textContent = p.price;
     modalDesc.textContent = p.description;
     modalInfoList.innerHTML = Object.entries(p.info).map(([k,v]) => `<li><span>${k}</span><span>${v}</span></li>`).join('');
-    modalBuyBtn.onclick = () => openAdminChooser(buyMessage(p));
+    if(p.sold){
+      modalBuyBtn.textContent = "Sold Out";
+      modalBuyBtn.disabled = true;
+      modalBuyBtn.onclick = null;
+    } else {
+      modalBuyBtn.textContent = "Buy Now";
+      modalBuyBtn.disabled = false;
+      modalBuyBtn.onclick = () => openAdminChooser(buyMessage(p));
+    }
     modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
