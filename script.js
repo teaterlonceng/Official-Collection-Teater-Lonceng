@@ -158,7 +158,8 @@ const ADMINS = [
       priceRaw: 10000,
       description: "Kalau sebelumnya ada gurita biru elektrik yang nyentrik, sekarang hadir versi pastelnya yang lebih kalem! Wajahnya yang innocent bikin siapa saja nggak rela kalau sampai kunci berharga ini hilang.",
       image: "fotoproduk15.jpg",
-      info: { "Desain Utama": "Karakter gurita/ubur-ubur 3D", "Karakteristik": "Desain sudah matang dan memorable"}
+      info: { "Desain Utama": "Karakter gurita/ubur-ubur 3D", "Karakteristik": "Desain sudah matang dan memorable"},
+        sold: true
     },
      {
       id: 16,
@@ -211,7 +212,8 @@ const ADMINS = [
       priceRaw: 10000,
       description: "Gantungan kunci ini tidak berfungsi sebagai cermin atau bunga, melainkan sebagai teman ngobrol imajiner yang sangat suportif! Wujudnya yang bulat dan empuk membuatnya terlihat seperti gumpalan blueberry yang hidup.",
       image: "fotoproduk20.jpg",
-      info: { "Desain Utama": "Karakter monster/alien 3D", "Detail Visual": "Memiliki kaki/dasar berwarna ungu muda" }
+      info: { "Desain Utama": "Karakter monster/alien 3D", "Detail Visual": "Memiliki kaki/dasar berwarna ungu muda" },
+        sold: true
     },
      {
       id: 21,
