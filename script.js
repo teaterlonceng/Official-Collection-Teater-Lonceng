@@ -1,4 +1,4 @@
-  const ADMINS = [
+const ADMINS = [
     { label: "Admin 1", number: "6285772166096" },
     { label: "Admin 2", number: "6285881357017" }
   ];
@@ -314,7 +314,7 @@
 
   function buyMessage(product){
     const noun = product.category === "TICKET" ? "tiketnya" : "produknya";
-    return `Halo Teater Lonceng 👋\n\nSaya tertarik untuk membeli:\n\nProduk: ${product.name}\nHarga: ${product.price}\n\nApakah ${noun} masih tersedia?\n\nTerima kasih.`;
+    return `Halo Teater Lonceng 👋\n\nSaya tertarik untuk membeli:\n\nProduk: ${product.name}\nHarga: ${product.price}\n\nApakah ${noun} masih tersedia?\n\nBerikut data saya:\nNama: \nTau web/katalog ini dari mana: \nApakah punya kenalan di Teater Lonceng (jika ada, sebutkan nama): \n\nTerima kasih.`;
   }
 
   function renderGrid(){
@@ -436,7 +436,7 @@
   });
 
   /* ---- Floating WhatsApp & Footer button ---- */
-  const genericMessage = "Halo Teater Lonceng 👋 Saya ingin bertanya mengenai produk yang tersedia.";
+  const genericMessage = "Halo Teater Lonceng 👋\n\nSaya ingin bertanya mengenai produk yang tersedia.\n\nBerikut data saya:\nNama: \nTau web/katalog ini dari mana: \nApakah punya kenalan di Teater Lonceng (jika ada, sebutkan nama): ";
   document.getElementById('fabWhatsapp').addEventListener('click', (e) => {
     e.preventDefault();
     openAdminChooser(genericMessage);
