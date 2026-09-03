@@ -331,6 +331,19 @@ const ADMINS = [
     return `Halo Teater Lonceng 👋\n\nSaya tertarik untuk membeli:\n\nProduk: ${product.name}\nHarga: ${product.price}\n\nApakah ${noun} masih tersedia?\n\nBerikut data saya:\nNama: \nTau web/katalog ini dari mana: \nApakah punya kenalan di Teater Lonceng (jika ada, sebutkan nama): \n\nTerima kasih.`;
   }
 
+  const cardHoverCapable = window.matchMedia('(hover: hover)').matches;
+
+  function attachCardSpotlight(card){
+    if(!cardHoverCapable) return;
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', x + '%');
+      card.style.setProperty('--my', y + '%');
+    });
+  }
+
   function renderGrid(){
     const term = currentSearch.trim().toLowerCase();
     const filtered = products.filter(p => {
@@ -352,7 +365,10 @@ const ADMINS = [
 
     filtered.forEach((p, i) => {
       const card = document.createElement('div');
-      card.className = "product-card" + (p.sold ? " is-sold" : "");
+      const cardClasses = ["product-card"];
+      if(p.sold) cardClasses.push("is-sold");
+      if(p.category === "TICKET") cardClasses.push("is-ticket");
+      card.className = cardClasses.join(" ");
       card.style.animationDelay = (i * 90) + "ms";
       card.innerHTML = `
         <div class="card-img-wrap">
@@ -372,6 +388,7 @@ const ADMINS = [
         </div>
       `;
       grid.appendChild(card);
+      attachCardSpotlight(card);
 
       requestAnimationFrame(() => card.classList.add('reveal'));
     });
