@@ -341,6 +341,14 @@ const ADMINS = [
       const y = ((e.clientY - rect.top) / rect.height) * 100;
       card.style.setProperty('--mx', x + '%');
       card.style.setProperty('--my', y + '%');
+      const rx = ((x - 50) / 50) * 5;   // -5deg .. 5deg
+      const ry = ((50 - y) / 50) * 5;   // -5deg .. 5deg
+      card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+      card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
     });
   }
 
