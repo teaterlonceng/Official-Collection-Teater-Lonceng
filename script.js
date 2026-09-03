@@ -12,7 +12,8 @@ const ADMINS = [
       priceRaw: 10000,
       description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
       image: "fotoproduk1.jpeg",
-      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"}
+      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"},
+        sold: true
     },
     {
       id: 2,
@@ -117,7 +118,8 @@ const ADMINS = [
       priceRaw: 15000,
       description: "Peringatan: Menatap cermin ini terlalu lama dapat memunculkan ilusi bahwa kamu adalah karakter utama di anime bergenre magical girl. Ini adalah cermin yang sangat demure, sangat mindful.",
       image: "fotoproduk11.jpg",
-      info: { "Karakteristik": "Desain asimetris dengan pita" }
+      info: { "Karakteristik": "Desain asimetris dengan pita" },
+        sold: true
     },
      {
       id: 12,
@@ -254,6 +256,16 @@ const ADMINS = [
       description: "Gantungan kunci yang satu ini sukses bikin perut keroncongan mendadak. Bentuknya begitu meyakinkan sampai-sampai rasanya ingin dicelupkan ke dalam secangkir kopi panas!",
       image: "fotoproduk24.jpg",
       info: { "Detail Visual": "Tekstur kawat bulu yang fuzzy", "Karakteristik": "Ide yang sangat brilian dan out of the box"}
+    },
+      {
+      id: 25,
+      name: "KEY CHAIN 25",
+      category: "MERCHANDISE",
+      price: "Rp10.000",
+      priceRaw: 10000,
+      description: "Tinggalkan sejenak estetika minimalis, karena pita raksasa ini lahir untuk menyita perhatian! Dengan gaya coquette dan ballet-core yang sedang merajai tren, gantungan kunci ini adalah manifestasi fisik dari kata fabulous.",
+      image: "fotoproduk25.jpg",
+      info: { "Desain": "Berbentuk pita simetris dengan dua lingkaran", "Pusat Perhatian": "Manik-manik metalik magenta di bagian tengah"}
     },
   ];
 
