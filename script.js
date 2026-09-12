@@ -182,7 +182,8 @@ const ADMINS = [
       priceRaw: 10000,
       description: "Tinggalkan sejenak kelopak bundar yang basic, karena bunga ini hadir membawa nuansa flora eksotis nan mewah! Tampilannya mengingatkan pada bunga anggrek langka atau pansy mekar yang biasa menjadi kebanggaan di taman botani.",
       image: "fotoproduk17.jpg",
-      info: { "Desain Utama": "Berukuran besar dengan kelopak lebar", "Karakteristik": "Eksekusi warnanya sangat kontras dan berani" }
+      info: { "Desain Utama": "Berukuran besar dengan kelopak lebar", "Karakteristik": "Eksekusi warnanya sangat kontras dan berani" },
+        sold: true
     },
      {
       id: 18,
@@ -235,7 +236,8 @@ const ADMINS = [
       priceRaw: 15000,
       description: "Tinggalkan sejenak warna pastel yang kalem, karena cermin ini hadir untuk mendobrak rutinitas! Warnanya yang menyala dijamin bikin mata langsung melek.",
       image: "fotoproduk22.jpg",
-      info: { "Ornamen": "Dilengkapi aksen berbentuk pita/telinga", "Karakteristik": "Hijaunya sangat optimis—persis seperti grafik" }
+      info: { "Ornamen": "Dilengkapi aksen berbentuk pita/telinga", "Karakteristik": "Hijaunya sangat optimis—persis seperti grafik" },
+        sold: true
     },
      {
       id: 23,
