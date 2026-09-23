@@ -43,7 +43,8 @@ const ADMINS = [
       priceRaw: 15000,
       description: "Buat apa repot merogoh tas mencari cermin besar kalau ada versi portabel yang super gemas? Cermin saku berkedok gantungan kunci ini adalah penyelamat sejati untuk mengecek tatanan rambut atau memastikan tidak ada sisa makanan yang menyelip di gigi sebelum presentasi di kampus.",
       image: "fotoproduk4.jpg",
-      info: { "Deskripsi Utama": "Cermin yang dibingkai rajutan kawat bulu", "Ornamen": "Ditaburi manik-manik mutiara putih" }
+      info: { "Deskripsi Utama": "Cermin yang dibingkai rajutan kawat bulu", "Ornamen": "Ditaburi manik-manik mutiara putih" },
+      sold: true
     },
      {
       id: 5,
@@ -96,8 +97,7 @@ const ADMINS = [
       priceRaw: 10000,
       description: "Nah, ini dia bintang utamanya yang paling mencuri perhatian! Gantungan kunci yang satu ini hadir dalam wujud karakter yang super unik. Karakternya yang nyentrik dan ekspresif ini bahkan punya aura yang pas banget kalau dijadikan inspirasi karakter maskot visual untuk sebuah aplikasi digital kekinian.",
       image: "fotoproduk9.jpg",
-      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah"},
-      sold: true
+      info: { "Bahan Utama": "Kawat bulu berwarna biru elektrik cerah"}
     },
      {
       id: 10,
@@ -271,11 +271,111 @@ const ADMINS = [
     },
     {
       id: 26,
+      name: "KEY CHAIN 26",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Lupakan sejenak soal diet sehat atau anjuran makan sayur dari ibu, karena wortel yang satu ini hadir khusus untuk memenuhi asupan estetika tasmu! Dengan ukurannya yang super chunky dan warnanya yang menyala, wortel kawat bulu ini dijamin akan membuat kelinci paling rabun sekalipun bisa melihatnya dari jarak satu kilometer",
+      image: "fotoproduk26.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Desain": "Sayur Wortel"}
+    },
+     {
+      id: 27,
+      name: "KEY CHAIN 27",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Si SpongeBob Mukanya kuning stabilo, pipi pink merona, celana coklat buluk. Dibalik mukanya ada kaca buat ngaca-in dosa. Laku keras di Bikini Bottom!",
+      image: "fotoproduk27.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Desain": "Terinspirasi dari karakter Spongebob"}
+    },
+    {
+      id: 28,
+      name: "KEY CHAIN 28",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Siapa yang bisa menolak pesona gantungan kunci buatan tangan ini? Dengan wajah konyol yang pipinya memerah menggemaskan dan topi pusaran hijau limau yang unik, teman kecil ini siap menjadi maskot tas, kunci, atau ransel Anda. Setiap detailnya, mulai dari manik-manik mutiara yang menjuntai hingga jalinan warna-warni, dibuat dengan penuh perhatian. Lebih dari sekadar gantungan kunci, ini adalah percikan kebahagiaan berbulu yang bisa Anda bawa ke mana saja. Sempurna untuk Anda yang menyukai barang-barang aneh tapi lucu!",
+      image: "fotoproduk28.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Ukuran": "Diameter sekitar 5-6 cm"}
+    },
+     {
+      id: 29,
+      name: "KEY CHAIN 29",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Pernahkah Anda membayangkan memiliki sedikit keajaiban lautan di saku Anda? Temui gantungan kunci pusaran kawat bulu kami yang unik dan menggemaskan ini! Dibuat dengan penuh cinta dari lapisan kawat bulu (chenille stem) lembut dalam gradasi warna biru konsentris, gantungan kunci ini menciptakan efek visual gelombang laut yang memukau. Di pusat pusaran yang menawan ini, terdapat pesona ekor putri duyung transparan dengan mutiara kecil yang berkilau, seolah-olah baru saja muncul dari kedalaman laut. Teksturnya yang 'puffy' dan lembut menjadikannya tidak hanya cantik untuk dilihat, tetapi juga menyenangkan untuk dipegang. Hadiah sempurna untuk diri sendiri atau orang terkasih yang menyukai hal-hal unik, estetis, dan buatan tangan. Siap untuk membuat tas, kunci, atau ransel Anda menjadi pusat perhatian!",
+      image: "fotoproduk29.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Aksen": "Charm Ekor Putri Duyung"}
+    },
+    {
+      id: 30,
+      name: "KEY CHAIN 30",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Daun semanggi hoki KW super. Bulunya tebel kayak karpet masjid, ditengahnya ada mutiara 1 biji biar keliatan mahal. Ada gantungan mutiara biar tas kamu gak kalah glow-up sama yang punya. Bawa hoki, bawa gaya.",
+      image: "fotoproduk30.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Aksen": "Bentuk Semanggi berdaun empat"}
+    },
+    {
+      id: 31,
+      name: "KEY CHAIN 31",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Gantungan Snow White ini abis begadang nungguin 7 kurcaci gak pulang-pulang. Mata hitam manis, pipi pink malu-malu, bando merah nyala ada mutiara 1 biar tetep slay. Rambut poni belah tengah, siap nemenin tas kamu biar gak kesepian.",
+      image: "fotoproduk31.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Aksen": "Manik mutiara faux putih mengilap di pita"}
+    },
+     {
+      id: 32,
+      name: "KEY CHAIN 32",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Gantungan Spiderman abis begadang. Mata setengah kebuka, badan bulat kayak rambutan, tapi tetep ngerasa ganteng. Cocok buat tas kamu biar tambah judes. 😎",
+      image: "fotoproduk32.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Karakter": "Terinspirasi dari karakter Spiderman"}
+    },
+    {
+      id: 33,
+      name: "KEY CHAIN 33",
+      category: "MERCHANDISE",
+      price: "Rp12.000",
+      priceRaw: 12000,
+      description: "Bikin tampilan tas atau dompetmu makin manis dengan gantungan kunci bentuk ceri yang super cute ini! Desain empuknya yang unik dengan sentuhan mutiara memberikan kesan playful sekaligus estetik.",
+      image: "fotoproduk33.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Desain": "Berbentuk buah ceri merah"}
+    },
+    {
+      id: 34,
+      name: "KEY CHAIN 34",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Bikin tampilan tas atau kuncimu makin stand out dengan gantungan kunci buatan tangan yang unik ini! Desain karakternya yang lucu memakai tudung hewan berwarna pink bertekstur empuk pastinya bikin siapa saja gemas melihatnya.",
+      image: "fotoproduk34.jpg",
+      info: { "Bahan Utama": "Kawat bulu", "Desain": "Menampilkan karakter berhidung pink"}
+    },
+     {
+      id: 35,
+      name: "KEY CHAIN 35",
+      category: "MERCHANDISE",
+      price: "Rp15.000",
+      priceRaw: 15000,
+      description: "Berikan sentuhan manis ala bakery pada tas atau kuncimu dengan gantungan kunci handmade ini! Bentuknya yang bundar dengan pinggiran putih menyerupai biskuit berlapis krim bikin tampilannya estetik, cozy, dan pastinya super gemas.",
+      image: "fotoproduk35.jpg",
+      info: { "Bahan Utama": "Kawat bulu"}
+    },
+    {
+      id: 36,
       name: "TIKET — MALING MENANGIS",
       category: "TICKET",
       price: "Cek Form Pendaftaran",
       priceRaw: 0,
-      description: "Drama pendek karya Putu Wijaya. Satu tangisan, ribuan pertanyaan — maling tetap lah maling, tapi kenapa dia menangis? Temukan jawabannya langsung di panggung.",
+      description: "Drama pendek karya Putu Wijaya. Satu tangisan, ribuan pertanyaan - maling tetap lah maling, tapi kenapa dia menangis? Temukan jawabannya langsung di panggung.",
       image: "poster.jpg",
       info: { "Naskah": "Putu Wijaya", "Sutradara": "Alfi Syahrin", "Lokasi": "City Gallery Tangerang Selatan", "Tanggal": "10 Oktober 2026" }
     },
