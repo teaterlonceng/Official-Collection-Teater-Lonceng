@@ -269,20 +269,20 @@ const ADMINS = [
       image: "fotoproduk25.jpg",
       info: { "Desain": "Berbentuk pita simetris dengan dua lingkaran", "Pusat Perhatian": "Manik-manik metalik magenta di bagian tengah"}
     },
-      {
-       id: 26,
-      name: "KEY CHAIN 26",
-      category: "MERCHANDISE",
-      price: "Rp10.000",
-      priceRaw: 10000,
-      description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
-      image: "fotoproduk26.jpeg",
-      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"},
-        sold: true
+    {
+      id: 26,
+      name: "TIKET — MALING MENANGIS",
+      category: "TICKET",
+      price: "Cek Form Pendaftaran",
+      priceRaw: 0,
+      description: "Drama pendek karya Putu Wijaya. Satu tangisan, ribuan pertanyaan — maling tetap lah maling, tapi kenapa dia menangis? Temukan jawabannya langsung di panggung.",
+      image: "poster.jpg",
+      info: { "Naskah": "Putu Wijaya", "Sutradara": "Alfi Syahrin", "Lokasi": "City Gallery Tangerang Selatan", "Tanggal": "10 Oktober 2026" }
     },
   ];
 
-  const TICKET_EMPTY_MESSAGE = "Belum ada tiket yang tersedia saat ini — nantikan kabar selanjutnya dari kami.";
+  const TICKET_EMPTY_MESSAGE = "Belum ada tiket yang tersedia saat ini — pesan lewat form di bawah, nanti kami konfirmasi lewat WhatsApp.";
+  const TICKET_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfD3hBGMkfeGyEa9-Gk9lMQYq6r-Dg0mvzojHfuzeTyHkCg-w/viewform?usp=dialog";
   const SEARCH_EMPTY_MESSAGE = "Tidak ada produk yang cocok — coba kata kunci lain.";
 
   const grid = document.getElementById('productGrid');
@@ -376,8 +376,11 @@ const ADMINS = [
     grid.innerHTML = "";
 
     if(filtered.length === 0){
-      const message = (currentFilter === "TICKET" && !term) ? TICKET_EMPTY_MESSAGE : SEARCH_EMPTY_MESSAGE;
-      grid.innerHTML = `<div class="no-results">${message}</div>`;
+      if(currentFilter === "TICKET" && !term){
+        grid.innerHTML = `<div class="no-results">${TICKET_EMPTY_MESSAGE}<br><a href="${TICKET_FORM_URL}" target="_blank" rel="noopener" class="btn-order ticket-form-btn">Pesan Tiket</a></div>`;
+      } else {
+        grid.innerHTML = `<div class="no-results">${SEARCH_EMPTY_MESSAGE}</div>`;
+      }
       countLabel.textContent = "00 PRODUCTS";
       return;
     }
@@ -404,7 +407,7 @@ const ADMINS = [
           <div class="card-price">${p.price}</div>
           <div class="card-actions">
             <button class="btn-view uppercase" data-view="${p.id}">View Details</button>
-            <button class="btn-buy uppercase" data-buy="${p.id}" ${p.sold ? 'disabled' : ''}>${p.sold ? 'Sold Out' : 'Buy Now'}</button>
+            <button class="btn-buy uppercase" data-buy="${p.id}" ${p.sold ? 'disabled' : ''}>${p.sold ? 'Sold Out' : (p.category === "TICKET" ? 'Pesan Tiket' : 'Buy Now')}</button>
           </div>
         </div>
       `;
@@ -420,7 +423,11 @@ const ADMINS = [
     grid.querySelectorAll('[data-buy]:not([disabled])').forEach(btn => {
       btn.addEventListener('click', () => {
         const product = products.find(p => p.id === Number(btn.dataset.buy));
-        openAdminChooser(buyMessage(product));
+        if(product.category === "TICKET"){
+          window.open(TICKET_FORM_URL, '_blank', 'noopener');
+        } else {
+          openAdminChooser(buyMessage(product));
+        }
       });
     });
 
@@ -465,6 +472,10 @@ const ADMINS = [
       modalBuyBtn.textContent = "Sold Out";
       modalBuyBtn.disabled = true;
       modalBuyBtn.onclick = null;
+    } else if(p.category === "TICKET"){
+      modalBuyBtn.textContent = "Pesan Tiket";
+      modalBuyBtn.disabled = false;
+      modalBuyBtn.onclick = () => window.open(TICKET_FORM_URL, '_blank', 'noopener');
     } else {
       modalBuyBtn.textContent = "Buy Now";
       modalBuyBtn.disabled = false;
