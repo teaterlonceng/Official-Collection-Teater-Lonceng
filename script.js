@@ -371,7 +371,7 @@ const ADMINS = [
     },
     {
       id: 36,
-      name: "TIKET — MALING MENANGIS",
+      name: "TIKET - MALING MENANGIS",
       category: "TICKET",
       price: "Cek Form Pendaftaran",
       priceRaw: 0,
