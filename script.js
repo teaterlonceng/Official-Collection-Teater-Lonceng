@@ -269,6 +269,17 @@ const ADMINS = [
       image: "fotoproduk25.jpg",
       info: { "Desain": "Berbentuk pita simetris dengan dua lingkaran", "Pusat Perhatian": "Manik-manik metalik magenta di bagian tengah"}
     },
+      {
+       id: 26,
+      name: "KEY CHAIN 26",
+      category: "MERCHANDISE",
+      price: "Rp10.000",
+      priceRaw: 10000,
+      description: "Wah, ternyata mahakarya ini 100% terbuat dari kawat bulu (pipecleaner)! Lupakan mawar dari kebun, kenalkan flora mutan generasi now yang lahir dari hasil pelintiran penuh kesabaran tingkat dewa.",
+      image: "fotoproduk26.jpeg",
+      info: { "Bahan Utama": "100% Kawat bulu", "Size": "6-8 cm"},
+        sold: true
+    },
   ];
 
   const TICKET_EMPTY_MESSAGE = "Belum ada tiket yang tersedia saat ini — nantikan kabar selanjutnya dari kami.";
