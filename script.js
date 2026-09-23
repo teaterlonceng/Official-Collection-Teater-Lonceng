@@ -276,7 +276,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Lupakan sejenak soal diet sehat atau anjuran makan sayur dari ibu, karena wortel yang satu ini hadir khusus untuk memenuhi asupan estetika tasmu! Dengan ukurannya yang super chunky dan warnanya yang menyala, wortel kawat bulu ini dijamin akan membuat kelinci paling rabun sekalipun bisa melihatnya dari jarak satu kilometer",
-      image: "fotoproduk26.jpg",
+      image: "fotoproduk26.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Desain": "Sayur Wortel"}
     },
      {
@@ -286,7 +286,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Si SpongeBob Mukanya kuning stabilo, pipi pink merona, celana coklat buluk. Dibalik mukanya ada kaca buat ngaca-in dosa. Laku keras di Bikini Bottom!",
-      image: "fotoproduk27.jpg",
+      image: "fotoproduk27.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Desain": "Terinspirasi dari karakter Spongebob"}
     },
     {
@@ -296,7 +296,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Siapa yang bisa menolak pesona gantungan kunci buatan tangan ini? Dengan wajah konyol yang pipinya memerah menggemaskan dan topi pusaran hijau limau yang unik, teman kecil ini siap menjadi maskot tas, kunci, atau ransel Anda. Setiap detailnya, mulai dari manik-manik mutiara yang menjuntai hingga jalinan warna-warni, dibuat dengan penuh perhatian. Lebih dari sekadar gantungan kunci, ini adalah percikan kebahagiaan berbulu yang bisa Anda bawa ke mana saja. Sempurna untuk Anda yang menyukai barang-barang aneh tapi lucu!",
-      image: "fotoproduk28.jpg",
+      image: "fotoproduk28.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Ukuran": "Diameter sekitar 5-6 cm"}
     },
      {
@@ -306,7 +306,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Pernahkah Anda membayangkan memiliki sedikit keajaiban lautan di saku Anda? Temui gantungan kunci pusaran kawat bulu kami yang unik dan menggemaskan ini! Dibuat dengan penuh cinta dari lapisan kawat bulu (chenille stem) lembut dalam gradasi warna biru konsentris, gantungan kunci ini menciptakan efek visual gelombang laut yang memukau. Di pusat pusaran yang menawan ini, terdapat pesona ekor putri duyung transparan dengan mutiara kecil yang berkilau, seolah-olah baru saja muncul dari kedalaman laut. Teksturnya yang 'puffy' dan lembut menjadikannya tidak hanya cantik untuk dilihat, tetapi juga menyenangkan untuk dipegang. Hadiah sempurna untuk diri sendiri atau orang terkasih yang menyukai hal-hal unik, estetis, dan buatan tangan. Siap untuk membuat tas, kunci, atau ransel Anda menjadi pusat perhatian!",
-      image: "fotoproduk29.jpg",
+      image: "fotoproduk29.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Aksen": "Charm Ekor Putri Duyung"}
     },
     {
@@ -316,7 +316,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Daun semanggi hoki KW super. Bulunya tebel kayak karpet masjid, ditengahnya ada mutiara 1 biji biar keliatan mahal. Ada gantungan mutiara biar tas kamu gak kalah glow-up sama yang punya. Bawa hoki, bawa gaya.",
-      image: "fotoproduk30.jpg",
+      image: "fotoproduk30.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Aksen": "Bentuk Semanggi berdaun empat"}
     },
     {
@@ -326,7 +326,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Gantungan Snow White ini abis begadang nungguin 7 kurcaci gak pulang-pulang. Mata hitam manis, pipi pink malu-malu, bando merah nyala ada mutiara 1 biar tetep slay. Rambut poni belah tengah, siap nemenin tas kamu biar gak kesepian.",
-      image: "fotoproduk31.jpg",
+      image: "fotoproduk31.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Aksen": "Manik mutiara faux putih mengilap di pita"}
     },
      {
@@ -336,7 +336,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Gantungan Spiderman abis begadang. Mata setengah kebuka, badan bulat kayak rambutan, tapi tetep ngerasa ganteng. Cocok buat tas kamu biar tambah judes. 😎",
-      image: "fotoproduk32.jpg",
+      image: "fotoproduk32.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Karakter": "Terinspirasi dari karakter Spiderman"}
     },
     {
@@ -346,7 +346,7 @@ const ADMINS = [
       price: "Rp12.000",
       priceRaw: 12000,
       description: "Bikin tampilan tas atau dompetmu makin manis dengan gantungan kunci bentuk ceri yang super cute ini! Desain empuknya yang unik dengan sentuhan mutiara memberikan kesan playful sekaligus estetik.",
-      image: "fotoproduk33.jpg",
+      image: "fotoproduk33.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Desain": "Berbentuk buah ceri merah"}
     },
     {
@@ -356,7 +356,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Bikin tampilan tas atau kuncimu makin stand out dengan gantungan kunci buatan tangan yang unik ini! Desain karakternya yang lucu memakai tudung hewan berwarna pink bertekstur empuk pastinya bikin siapa saja gemas melihatnya.",
-      image: "fotoproduk34.jpg",
+      image: "fotoproduk34.jpeg",
       info: { "Bahan Utama": "Kawat bulu", "Desain": "Menampilkan karakter berhidung pink"}
     },
      {
@@ -366,7 +366,7 @@ const ADMINS = [
       price: "Rp15.000",
       priceRaw: 15000,
       description: "Berikan sentuhan manis ala bakery pada tas atau kuncimu dengan gantungan kunci handmade ini! Bentuknya yang bundar dengan pinggiran putih menyerupai biskuit berlapis krim bikin tampilannya estetik, cozy, dan pastinya super gemas.",
-      image: "fotoproduk35.jpg",
+      image: "fotoproduk35.jpeg",
       info: { "Bahan Utama": "Kawat bulu"}
     },
     {
