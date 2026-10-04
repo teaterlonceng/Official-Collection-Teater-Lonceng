@@ -388,9 +388,11 @@ const ADMINS = [
   const grid = document.getElementById('productGrid');
   const countLabel = document.getElementById('productCount');
   const searchInput = document.getElementById('searchInput');
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const filterButtons = document.querySelectorAll('.category-card');
+  const collection = document.getElementById('collection');
+  const pickHint = document.getElementById('pickHint');
 
-  let currentFilter = "ALL";
+  let currentFilter = null;
   let currentSearch = "";
 
   function waLink(number, message){
@@ -466,9 +468,15 @@ const ADMINS = [
   }
 
   function renderGrid(){
+    if(!currentFilter){
+      grid.innerHTML = "";
+      countLabel.textContent = "PILIH KATEGORI";
+      return;
+    }
+
     const term = currentSearch.trim().toLowerCase();
     const filtered = products.filter(p => {
-      const matchFilter = currentFilter === "ALL" || p.category === currentFilter;
+      const matchFilter = p.category === currentFilter;
       const matchSearch = !term || p.name.toLowerCase().includes(term) || p.description.toLowerCase().includes(term) || p.category.toLowerCase().includes(term);
       return matchFilter && matchSearch;
     });
@@ -538,12 +546,24 @@ const ADMINS = [
     renderGrid();
   });
 
+  /* ---- Category picker ---- */
+  ['MERCHANDISE','TICKET'].forEach(cat => {
+    const n = products.filter(p => p.category === cat && !p.sold).length;
+    const el = document.getElementById('catCount' + cat);
+    if(el) el.textContent = cat === 'TICKET' ? 'Pertunjukan terbaru' : n + ' produk tersedia';
+  });
+
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       currentFilter = btn.dataset.filter;
+      currentSearch = "";
+      searchInput.value = "";
+      collection.hidden = false;
+      pickHint.style.display = 'none';
       renderGrid();
+      collection.scrollIntoView({ behavior:'smooth', block:'start' });
     });
   });
 
@@ -632,8 +652,8 @@ const ADMINS = [
     link.addEventListener('click', () => toggleMenu(false));
   });
 
-  /* ---- Scroll reveal for catalog head/controls ---- */
-  const revealTargets = document.querySelectorAll('.catalog-head, .controls');
+  /* ---- Scroll reveal for catalog head/controls + press ---- */
+  const revealTargets = document.querySelectorAll('.catalog-head, .press-head');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if(entry.isIntersecting){
