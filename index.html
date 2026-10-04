@@ -26,6 +26,7 @@
     <span>TEATER LONCENG</span>
   </a>
   <div class="nav-center">
+    <a href="#press">PEMBERITAAN</a>
     <a href="#show">PERTUNJUKAN</a>
     <a href="#catalog">CATALOG</a>
     <a href="#contact">CONTACT</a>
@@ -41,6 +42,7 @@
 
 <div class="menu-overlay" id="menuOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
+  <a href="#press" class="mobile-link">PEMBERITAAN</a>
   <a href="#show" class="mobile-link">PERTUNJUKAN</a>
   <a href="#catalog" class="mobile-link">CATALOG</a>
   <a href="#contact" class="mobile-link">CONTACT</a>
@@ -61,6 +63,38 @@
   <p class="tagline">"Bergerak Semakin Nyaring."</p>
   <p class="desc">Pamulang, Tangerang Selatan</p>
   <div class="bulb-rail" aria-hidden="true"></div>
+</section>
+<div class="divider"></div>
+
+<!-- ============ PRESS / ARTIKEL ============ -->
+<section class="press" id="press">
+  <div class="press-head">
+    <div class="show-eyebrow uppercase">📰 Dalam Pemberitaan</div>
+    <h2>Jejak Kami di Media</h2>
+    <p>Sebelum naik panggung lagi, intip dulu cerita perjalanan Teater Lonceng.</p>
+  </div>
+
+  <div class="press-list">
+    <a class="press-card" href="https://banten.idntimes.com/news/banten/teater-lonceng-dari-tangsel-menang-di-2-kategori-ftkj-2022br-00-fx5pg-00n4jb" target="_blank" rel="noopener">
+      <span class="press-num">01</span>
+      <span class="press-thumb"><img src="artikel1.webp" alt="Pementasan Teater Lonceng di FTKJ 2022" loading="lazy"></span>
+      <span class="press-body">
+        <span class="press-source uppercase">IDN Times Banten</span>
+        <span class="press-title">Teater Lonceng dari Tangsel Menang di 2 Kategori FTKJ 2022</span>
+        <span class="press-read uppercase">Baca Artikel <i>→</i></span>
+      </span>
+    </a>
+
+    <a class="press-card" href="https://jakartainside.com/teater-lonceng-gelar-masketir-vol-1-suguhkan-pertunjukan-seni-dari-teras-rumah-untuk-masyarakat/" target="_blank" rel="noopener">
+      <span class="press-num">02</span>
+      <span class="press-thumb"><img src="aritikel2.jpg" alt="Pementasan Masketir Vol.1 dari teras rumah" loading="lazy"></span>
+      <span class="press-body">
+        <span class="press-source uppercase">JakartaInside</span>
+        <span class="press-title">Teater Lonceng Masketir Vol.1 — Pertunjukan Seni dari Teras Rumah untuk Masyarakat</span>
+        <span class="press-read uppercase">Baca Artikel <i>→</i></span>
+      </span>
+    </a>
+  </div>
 </section>
 <div class="divider"></div>
 
@@ -109,21 +143,34 @@
       <h2>THE COLLECTION</h2>
       <p>Take a piece of the stage with you.</p>
     </div>
-    <div class="catalog-count uppercase" id="productCount">03 PRODUCTS</div>
+    <div class="catalog-count uppercase" id="productCount">PILIH KATEGORI</div>
   </div>
 
-  <div class="controls">
-    <div class="search-wrap">
-      <input type="text" id="searchInput" placeholder="Search the collection...">
-    </div>
-    <div class="filters" id="filterGroup">
-      <button class="filter-btn active" data-filter="ALL">ALL</button>
-      <button class="filter-btn" data-filter="MERCHANDISE">MERCHANDISE</button>
-      <button class="filter-btn" data-filter="TICKET">TICKET</button>
-    </div>
+  <div class="category-picker" id="categoryPicker">
+    <button class="category-card" data-filter="MERCHANDISE">
+      <span class="cat-icon">🧷</span>
+      <span class="cat-name">Merchandise</span>
+      <span class="cat-sub" id="catCountMERCHANDISE"></span>
+      <span class="cat-go uppercase">Lihat Koleksi →</span>
+    </button>
+    <button class="category-card" data-filter="TICKET">
+      <span class="cat-icon">🎟️</span>
+      <span class="cat-name">Tiket</span>
+      <span class="cat-sub" id="catCountTICKET"></span>
+      <span class="cat-go uppercase">Lihat Tiket →</span>
+    </button>
   </div>
 
-  <div class="product-grid" id="productGrid"></div>
+  <p class="pick-hint" id="pickHint">Pilih salah satu kategori di atas untuk melihat koleksinya.</p>
+
+  <div class="collection" id="collection" hidden>
+    <div class="controls">
+      <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Search the collection...">
+      </div>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
 </section>
 
 <!-- ============ MODAL ============ -->
